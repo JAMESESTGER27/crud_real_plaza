@@ -11,8 +11,8 @@ import styles from "./header.module.css";
                             Aplication CRUD
                         </a>
                         <div className={styles.bar}>
-                        <span>James</span>
-                        <Link to="/">Logout</Link>
+                        <span className={styles.title}>Admin</span>
+                        <Link to="/" style={{textDecoration:"none",color:"white"}}>Logout</Link>
                         </div>
                         
                     </div>

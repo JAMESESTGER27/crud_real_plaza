@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React  from 'react'
 // import EmployeeService from '../services/EmployeeService';
 import { Link } from 'react-router-dom';
+import { data } from './data/data';
 import { Header } from './Header';
 import styles from "./ListEmployeeStyles.module.css";
 export const ListEmployee = () => {
 
-  const [employees, setEmployees] = useState([]);
+  // const [data, setEmployees] = useState([]);
 // No me funciona el backend
   // useEffect(()=>{
   //   EmployeeService.getAllEmployees()
@@ -31,11 +32,11 @@ export const ListEmployee = () => {
         </thead>
         <tbody>
           {
-            employees.map(
+            data.map(
               employe =>
                 <tr key={employe.id}>
                   <td>{employe.id}</td>
-                  <td>{employe.firstName}</td>
+                  <td>{employe.name}</td>
                   <td>{employe.lastName}</td>
                   <td>{employe.emailId}</td>
                 </tr>

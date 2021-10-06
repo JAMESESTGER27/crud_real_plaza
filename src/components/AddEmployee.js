@@ -1,27 +1,26 @@
 import React, { useState } from 'react'
-import EmployeeService from '../services/EmployeeService'
-import  {Link, useHistory} from 'react-router-dom'
+// import EmployeeService from '../services/EmployeeService'
+import  {Link} from 'react-router-dom'
 import style from "./addEmploye.module.css"
 export const AddEmployee = () => {
 
 	const [firstName, setFirstName] = useState("")
 	const [lastName, setLastName] = useState("")
 	const [emailId, setEmailOd] = useState("")
-	const history =  useHistory();
+	// const history =  useHistory();
 
 	const saveEmployee = (e) =>{
 		e.preventDefault();
-		const employee = {firstName,lastName,emailId}
+		// const employee = {firstName,lastName,emailId}
 
-		EmployeeService.createEmployee(employee)
-		.then((resp)=>{
-			console.log(resp.data)
-			history.push('/employees');
-		}).catch(error =>{
-			console.log(error)
-		})
-
-
+		// EmployeeService.createEmployee(employee)
+		// .then((resp)=>{
+		// 	console.log(resp.data)
+		// 	history.push('/employees');
+		// }).catch(error =>{
+		// 	console.log(error)
+		// })
+		
 	}
 
 	return (
