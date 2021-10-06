@@ -14,7 +14,6 @@ export const ListEmployee = () => {
   //     setEmployees(resp.data)
   //   }).catch(error=>console.log(error))
   // },[])
-
   return (
     <>
     <Header/>
@@ -25,10 +24,12 @@ export const ListEmployee = () => {
       </div>
       <table className={styles.table}>
         <thead>
-          <th>Employe Id</th>
-          <th>Employe Firsts Name</th>
-          <th>Employe Last Name</th>
-          <th>Employe Email Id</th>
+          <tr>
+            <th>Employe Id</th>
+            <th>Employe Firsts Name</th>
+            <th>Employe Last Name</th>
+            <th>Employe Email Id</th>
+          </tr>
         </thead>
         <tbody style={{ textAlign: "center" }}>
           {

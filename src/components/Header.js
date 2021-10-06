@@ -1,7 +1,10 @@
-
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import styles from "./header.module.css";
- export const Header = () => {
+
+export const Header = () => {
+
+  const { user } = useParams();
+
     return (
         <div>
             <header>
@@ -11,10 +14,9 @@ import styles from "./header.module.css";
                             Aplication CRUD
                         </a>
                         <div className={styles.bar}>
-                        <span className={styles.title}>Admin</span>
+                        <span className={styles.title}>User: {user} 🎫</span>
                         <Link to="/" style={{textDecoration:"none",color:"white"}}>Logout</Link>
                         </div>
-                        
                     </div>
                 </nav>
             </header>

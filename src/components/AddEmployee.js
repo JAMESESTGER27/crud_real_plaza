@@ -1,27 +1,22 @@
-import React from 'react'
+import React,{useState} from 'react'
+import { Link } from 'react-router-dom';
 // import EmployeeService from '../services/EmployeeService'
 // import  {Link} from 'react-router-dom'
 import style from "./addEmploye.module.css"
 export const AddEmployee = () => {
 
-	// const [firstName, setFirstName] = useState("")
-	// const [lastName, setLastName] = useState("")
-	// const [emailId, setEmailOd] = useState("")
-	// const history =  useHistory();
+	const [name, setName] = useState("")
+	const [lastName, setLastName] = useState("")
+	const [emailId, setEmaild] = useState("")
+	// const [daen,setDaEn] = useState({})
+	// const history =  useHistory ();
 
-	// const saveEmployee = (e) =>{
-	// 	e.preventDefault();
-		// const employee = {firstName,lastName,emailId}
-
-		// EmployeeService.createEmployee(employee)
-		// .then((resp)=>{
-		// 	console.log(resp.data)
-		// 	history.push('/employees');
-		// }).catch(error =>{
-		// 	console.log(error)
-		// })
-		
-	// }
+	const saveEmployee = (e) =>{
+		e.preventDefault();
+		const employee = {name,lastName,emailId}
+		console.log(employee)
+		// setDaEn(employee);
+	}
 
 	return (
 <>
@@ -30,23 +25,42 @@ export const AddEmployee = () => {
     <div className={style.card__title}>
       <h1>Agregar</h1>
     </div>
+<form >
     <div className={style.card__field}>
-      <label for="">Name: </label>
-      <input type="text" placeholder="Nombres"/>
+      <label htmlFor="name" >Name: </label>
+      <input 
+			type="text" 
+			name ="name" 
+			placeholder="Nombres"
+			value={name}
+			onChange={(e)=>setName(e.target.value)} 
+			/>
     </div>
     <div className={style.card__field}>
-			<label for="">Last Name: </label>
-      <input type="text" placeholder="Last Name"/>
+			<label htmlFor="last">Last Name: </label>
+      <input 
+			type="text" 
+			name = "last" 
+			placeholder="Last Name"
+			value={lastName}
+			onChange={(e)=>setLastName(e.target.value)}
+			/>
     </div>
     <div className={style.card__field}>
-			<label for="">Email: </label>
-      <input type="email" placeholder="Email"/>
+			<label htmlFor="email">Email: </label>
+      <input
+			type="email" 
+			name="email" 
+			placeholder="Email"
+			value={emailId}
+			onChange={(e)=>setEmaild(e.target.value)}
+			/>
     </div>
     <div className={style.container_btn}>
-      <button className={style.btn_s}>Submit</button>
-    	<button className={style.btn_c}>Cancel</button>
+      <button className={style.btn_s} onClick={(e)=>saveEmployee(e)}>Submit</button>
+    <Link  to="/employees" className={style.btn_c}>Cancel</Link>
     </div>
-    
+</form>
   </div>
 </div>
 </>

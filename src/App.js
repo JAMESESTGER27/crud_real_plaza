@@ -19,7 +19,7 @@ function App() {
         {/* <Header/> */}
         <Switch>
           <Route exact path="/" component={LoginScreen}></Route>
-          <Route exact path="/employees" component={ListEmployee}></Route>
+          <Route exact path="/employees/:user" component={ListEmployee}></Route>
           <Route path="/add-employee" component={AddEmployee}></Route>
           <Redirect to="/"/>
         </Switch>
