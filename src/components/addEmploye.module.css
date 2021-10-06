@@ -1,0 +1,62 @@
+.container{
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.row{
+    padding: 25px;
+    min-height: 400px;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.title{
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+.label{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+.input{
+    padding: .5rem;
+    margin-bottom: 20px;
+}
+.ontainer_btn{
+    display: flex;
+    align-items: center;
+}
+.btn_guardar{
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    color: white;
+    background-color: green;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn_cancelar{
+    font-size: 1rem;
+    
+    padding: .5rem 1rem;
+    color: white;
+    text-decoration: none;
+    background-color: red;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

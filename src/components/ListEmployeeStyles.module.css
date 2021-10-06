@@ -1,0 +1,30 @@
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.title{
+    font-size: 2rem;
+}
+.table{
+ table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid darkslategray;
+}
+.containerbtn{
+    margin-bottom: 15px;
+}
+.button{
+    padding: 10px;
+    color: white;
+    font-size: 1rem;
+    border-radius: 5px;
+    background-color: violet;
+    margin-bottom: 5px;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: capitalize;
+}
