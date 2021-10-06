@@ -30,7 +30,7 @@ export const ListEmployee = () => {
           <th>Employe Last Name</th>
           <th>Employe Email Id</th>
         </thead>
-        <tbody>
+        <tbody style={{ textAlign: "center" }}>
           {
             data.map(
               employe =>
