@@ -36,11 +36,11 @@ export const AddEmployee = () => {
     </div>
     <div className={style.card__field}>
 			<label for="">Last Name: </label>
-      <input type="text" placeholder="Edad"/>
+      <input type="text" placeholder="Last Name"/>
     </div>
     <div className={style.card__field}>
 			<label for="">Email: </label>
-      <input type="text" placeholder="Profesion"/>
+      <input type="email" placeholder="Email"/>
     </div>
     <div className={style.container_btn}>
       <button className={style.btn_s}>Submit</button>
