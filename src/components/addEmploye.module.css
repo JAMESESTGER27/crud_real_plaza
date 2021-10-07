@@ -1,17 +1,12 @@
 
 .contenedor{
     background-color: whitesmoke;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
   .card__title{
     text-align: center;
   }
   .card{
-    width: 500px;
+    width: 361px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -19,6 +14,7 @@
     border: 1px solid black;
     margin-right: 15px;
     margin-left: 15px;
+    margin-top: 17px;
   }
   .card__field input{
     width: 100%;
@@ -49,66 +45,3 @@
     cursor: pointer;
     text-decoration: none;
   }
-
-/* .container{
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.row{
-    padding: 25px;
-    min-height: 400px;
-}
-.card{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-.title{
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.form{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 15px;
-}
-.label{
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-}
-.input{
-    padding: .5rem;
-    margin-bottom: 20px;
-}
-.ontainer_btn{
-    display: flex;
-    align-items: center;
-}
-.btn_guardar{
-    font-size: 1rem;
-    padding: .5rem 1rem;
-    color: white;
-    background-color: green;
-    outline: none;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-.btn_cancelar{
-    font-size: 1rem;
-    
-    padding: .5rem 1rem;
-    color: white;
-    text-decoration: none;
-    background-color: red;
-    outline: none;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-} */

@@ -1,21 +1,20 @@
 import React,{useState} from 'react'
-import { Link } from 'react-router-dom';
 // import EmployeeService from '../services/EmployeeService'
 // import  {Link} from 'react-router-dom'
 import style from "./addEmploye.module.css"
-export const AddEmployee = () => {
+// import { data } from './data/data';
+export const AddEmployee = ({setDba}) => {
 
 	const [name, setName] = useState("")
 	const [lastName, setLastName] = useState("")
 	const [emailId, setEmaild] = useState("")
 	// const [daen,setDaEn] = useState({})
-	// const history =  useHistory ();
+	// const history =  useHistory();
 
 	const saveEmployee = (e) =>{
 		e.preventDefault();
 		const employee = {name,lastName,emailId}
-		console.log(employee)
-		// setDaEn(employee);
+		setDba(dt=> [...dt,employee])
 	}
 
 	return (
@@ -58,7 +57,6 @@ export const AddEmployee = () => {
     </div>
     <div className={style.container_btn}>
       <button className={style.btn_s} onClick={(e)=>saveEmployee(e)}>Submit</button>
-    <Link  to="/employees" className={style.btn_c}>Cancel</Link>
     </div>
 </form>
   </div>

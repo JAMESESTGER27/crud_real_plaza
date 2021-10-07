@@ -1,12 +1,12 @@
-import React  from 'react'
+import React, { useState }  from 'react'
 // import EmployeeService from '../services/EmployeeService';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
+import { AddEmployee } from './AddEmployee';
 import { data } from './data/data';
 import { Header } from './Header';
 import styles from "./ListEmployeeStyles.module.css";
 export const ListEmployee = () => {
 
-  // const [data, setEmployees] = useState([]);
 // No me funciona el backend
   // useEffect(()=>{
   //   EmployeeService.getAllEmployees()
@@ -14,18 +14,21 @@ export const ListEmployee = () => {
   //     setEmployees(resp.data)
   //   }).catch(error=>console.log(error))
   // },[])
+  const [dba,setDba] = useState(data);
+
   return (
     <>
     <Header/>
+    <div style={{display: "flex",alignItems: "center",alignContent:"center"}}>
+    <AddEmployee setDba={setDba}/>
     <div className={styles.container}>
       <h2 className={styles.title}>List Employes</h2>
       <div className={styles.containerbtn}>
-      <Link to="/add-employee" className={styles.button}> Add Employe </Link>
+      {/* <Link to="/add-employee" className={styles.button}> Add Employe </Link> */}
       </div>
       <table className={styles.table}>
         <thead>
           <tr>
-            <th>Employe Id</th>
             <th>Employe Firsts Name</th>
             <th>Employe Last Name</th>
             <th>Employe Email Id</th>
@@ -33,10 +36,9 @@ export const ListEmployee = () => {
         </thead>
         <tbody style={{ textAlign: "center" }}>
           {
-            data.map(
+            dba.map(
               employe =>
-                <tr key={employe.id}>
-                  <td>{employe.id}</td>
+                <tr key={employe.name}>
                   <td>{employe.name}</td>
                   <td>{employe.lastName}</td>
                   <td>{employe.emailId}</td>
@@ -45,6 +47,7 @@ export const ListEmployee = () => {
           }
         </tbody>
       </table>
+    </div>
     </div>
     </>
   )
