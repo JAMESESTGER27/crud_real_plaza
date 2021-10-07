@@ -15,6 +15,9 @@ export const AddEmployee = ({setDba}) => {
 		e.preventDefault();
 		const employee = {name,lastName,emailId}
 		setDba(dt=> [...dt,employee])
+		setName("");
+		setLastName("");
+		setEmaild("");
 	}
 
 	return (
