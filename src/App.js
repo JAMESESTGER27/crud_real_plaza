@@ -6,24 +6,27 @@ import {
   Redirect
 } from "react-router-dom";
 import "./App.css";
-// import { Header } from './components/Header';
-// import { Footer } from './components/Footer';
-import { ListEmployee } from './components/ListEmployee';
-import { AddEmployee } from "./components/AddEmployee";
-import { LoginScreen } from "./components/login/LoginScreen";
+
+import LoginPage from "./pages/LoginPage";
+import dashboard from "./pages/dashboard/dashboard";
+
+// import { ListEmployee } from './components/ListEmployee';
+// import { AddEmployee } from "./components/AddEmployee";
+// import { dashboard } from "./pages/dashboard/dashboard";
 
 function App() {
   return (
     <div>
       <Router>
-        {/* <Header/> */}
+        
         <Switch>
-          <Route exact path="/" component={LoginScreen}></Route>
-          <Route exact path="/employees/:user" component={ListEmployee}></Route>
-          <Route path="/add-employee" component={AddEmployee}></Route>
+          <Route exact path="/" component={LoginPage}/>
+          <Router exact path="/dashboard" component={dashboard}/>
+          {/* <Route exact path="/employees/:user" component={ListEmployee}></Route>
+          <Route path="/add-employee" component={AddEmployee}></Route> */}
           <Redirect to="/"/>
         </Switch>
-        {/* <Footer/> */}
+      
       </Router>
     </div>
   );
